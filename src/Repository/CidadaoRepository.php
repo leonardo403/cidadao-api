@@ -19,22 +19,21 @@ class CidadaoRepository extends ServiceEntityRepository
         parent::__construct($registry, Cidadao::class);
     }
 
-    // /**
-    //  * @return Cidadao[] Returns an array of Cidadao objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+    * @return Cidadao[] Returns an array of Cidadao objects
+    */
+  
+    public function findByCPF($value)
     {
         return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
+            ->andWhere('c.cpf = :val')
             ->setParameter('val', $value)
             ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Cidadao
@@ -47,4 +46,5 @@ class CidadaoRepository extends ServiceEntityRepository
         ;
     }
     */
+    
 }
